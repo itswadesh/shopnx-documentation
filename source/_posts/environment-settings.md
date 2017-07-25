@@ -1,23 +1,39 @@
 ---
 title: Environment Settings
 ---
-### Softwares
+  Rename <em>.env.sample</em> to <em>.env</em> and change according to your generated credentials
+  Generate the following APIs and input the credentials into .env file present at the root of the project
 
-- NodeJS (Web Server) (https://nodejs.org/en/)
-- MongoDB (Database) (https://www.mongodb.com/)
-  
-### Start mongodb in a separate shell
-  In Windows operating system we can start it by opening the following file
-  ``` bash
-  C:/Program Files/MongoDB/Server/3.2/bin/mongod.exe
-  ```  
+### Email Client
+ [Sendgrid](http://www.sendgrid.com/)
 
-### Run the following 2 commands
-  This will install the required node dependencies and start the Server at http://localhost:4200
-  ``` bash
-npm i
-npm run dev
-  ```  
+### Payment Gateway 
+ [Paypal Developer](http://developer.paypal.com/)
 
-Welcome to [Hexo](https://hexo.io/)!
-More info: [Deployment](https://hexo.io/docs/deployment.html)
+### Login through Facebook 
+ [Facebook Developer](http://developer.facebook.com/)
+
+### Google Auth Login 
+ [Google Developer Console](http://developer.facebook.com/)
+
+### Use twitter account to login to ShopNx 
+ [Twitter Developer](https://dev.twitter.com/)
+      
+
+``` bash
+MONGODB_URI=mongodb://localhost:27017/shopnx-dev
+DOMAIN=http://localhost:4200
+SESSION_SECRET=shopnx-secret
+PAYPAL_MODE=sandbox
+PAYPAL_CLIENT_ID=YOUR_PAYPAL_CLIENT_ID
+PAYPAL_CLIENT_SECRET=YOUR_PAYPAL_CLIENT_SECRET
+STRIPE_APIKEY=sk_test_REST_OF_YOUR_KEY
+SENDGRID_APIKEY=YOUR_SENDGRID_API_KEY
+FACEBOOK_ID=YOUR_FACEBOOK_ID
+FACEBOOK_SECRET=YOUR_FACEBOOK_SECRET
+TWITTER_ID=YOUR_TWITTER_ID
+TWITTER_SECRET=YOUR_TWITTER_SECRET
+GOOGLE_ID=YOUR_GOOGLE_ID
+GOOGLE_SECRET=YOUR_GOOGLE_SECRET
+GOOGLE_MAPS_API=YOUR_GOOGLE_MAPS_API
+  ``` 

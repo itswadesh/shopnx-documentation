@@ -77,4 +77,8 @@ theme: landscape
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-  type:
+  type: git
+  repo: https://github.com/itswadesh/shopnx-documentation.git
+  branch: gh-pages
+  message: documentation
+

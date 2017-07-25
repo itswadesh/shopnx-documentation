@@ -1,23 +1,82 @@
 ---
 title: Client Directory Structure
 ---
-### Softwares
-
-- NodeJS (Web Server) (https://nodejs.org/en/)
-- MongoDB (Database) (https://www.mongodb.com/)
-  
-### Start mongodb in a separate shell
-  In Windows operating system we can start it by opening the following file
-  ``` bash
-  C:/Program Files/MongoDB/Server/3.2/bin/mongod.exe
-  ```  
-
-### Run the following 2 commands
-  This will install the required node dependencies and start the Server at http://localhost:4200
-  ``` bash
-npm i
-npm run dev
-  ```  
-
-Welcome to [Hexo](https://hexo.io/)!
-More info: [Deployment](https://hexo.io/docs/deployment.html)
+``` bash
+├───app
+│   ├───account
+│   │   ├───cp
+│   │   ├───login
+│   │   ├───password
+│   │   └───profile
+│   ├───admin
+│   │   ├───address
+│   │   ├───brands
+│   │   │   └───brand-detail
+│   │   ├───categories
+│   │   ├───coupons
+│   │   │   └───coupon-detail
+│   │   ├───dashboard
+│   │   ├───features
+│   │   │   └───feature-detail
+│   │   ├───media
+│   │   ├───my-orders
+│   │   ├───my-reviews
+│   │   ├───order
+│   │   │   └───order-content
+│   │   ├───product
+│   │   │   ├───features
+│   │   │   ├───product-detail
+│   │   │   └───variants
+│   │   ├───reviews
+│   │   │   └───review-detail
+│   │   ├───shipping
+│   │   │   └───shipping-detail
+│   │   ├───user
+│   │   │   └───user-detail
+│   │   └───wishlist
+│   ├───home
+│   │   ├───banner
+│   │   ├───checkout
+│   │   ├───featured-products
+│   │   ├───home
+│   │   ├───megamenu
+│   │   ├───news-banner
+│   │   ├───owl-carousel
+│   │   ├───product
+│   │   ├───product-card
+│   │   ├───shop
+│   │   ├───success
+│   │   └───wish-button
+│   ├───modal
+│   └───shared
+│       ├───404
+│       ├───address
+│       ├───cart-buttons
+│       ├───dialogs
+│       ├───edit
+│       ├───export
+│       ├───footer
+│       ├───guards
+│       ├───header
+│       ├───list
+│       ├───list-image
+│       ├───media
+│       ├───oauth-buttons
+│       ├───pipes
+│       ├───search
+│       ├───services
+│       └───submit-button
+├───assets
+│   ├───fashion
+│   └───img
+└───environments
+|   hmr.ts
+|   index.html
+|   main.ts
+|   output.txt
+|   polyfills.ts
+|   test.ts
+|   tsconfig.app.json
+|   tsconfig.spec.json
+|   typings.d.ts
+```
