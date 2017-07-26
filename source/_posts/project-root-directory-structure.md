@@ -1,6 +1,9 @@
 ---
 title: Project Root Directory Structure
+date: 2017-07-21 06:40:12
 ---
+<p></p>
+
 ``` bash
 +---client
 +---node_modules

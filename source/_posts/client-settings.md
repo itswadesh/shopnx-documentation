@@ -1,5 +1,6 @@
 ---
 title: Client Settings
+date: 2017-07-24 06:40:12
 ---
 ### Path: 
 <em>client/app/settings.ts</em>

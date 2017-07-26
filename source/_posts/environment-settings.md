@@ -1,5 +1,6 @@
 ---
 title: Environment Settings
+date: 2017-07-22 06:40:12
 ---
   Rename <em>.env.sample</em> to <em>.env</em> and change according to your generated credentials
   Generate the following APIs and input the credentials into .env file present at the root of the project

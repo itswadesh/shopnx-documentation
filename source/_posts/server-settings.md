@@ -1,15 +1,16 @@
 ---
 title: Server Settings
+date: 2017-07-23 06:40:12
 ---
 <p>Path: <em>server/config.ts</em></p>
 ### Website Settings
 ``` bash
-  smsEnabled = true;
+smsEnabled = true;
 emailEnabled = true;
   ```  
 ### Review Settings
 ``` bash
-  reviewSettings = {
+reviewSettings = {
   enabled: true, // Enables review for products
   moderate: false // If enabled, the review will be visible to public after admin approval
 };
@@ -24,7 +25,7 @@ emailEnabled = true;
   ``` 
 ### Forgot Password Email Settings
 ``` bash
-  forgotPasswordEmail = (body) => { // Expects email id and password reset token
+forgotPasswordEmail = (body) => { // Expects email id and password reset token
   return {
     from: 'passwordreset@codenx.com',
     to: body.email,
@@ -50,7 +51,7 @@ resetPasswordEmail = (body) => { // Expects email id and name
   ``` 
 ### Order Placed Email Settings
 ``` bash
-  orderPlacedEmail = (body) => { // Expects email id, orderNo, ...
+orderPlacedEmail = (body) => { // Expects email id, orderNo, ...
   return {
     from: 'CodeNx <admin@codenx.com>',
     to: body.to,
@@ -69,7 +70,7 @@ resetPasswordEmail = (body) => { // Expects email id and name
   ``` 
 ### Order Updated Email Settings
 ``` bash
-  orderUpdatedEmail = (body) => {
+orderUpdatedEmail = (body) => {
   return {
     from: 'CodeNx <admin@codenx.com>',
     to: body.to,

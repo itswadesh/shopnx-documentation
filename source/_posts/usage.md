@@ -1,11 +1,12 @@
 ---
 title: Usage Instructions
+date: 2017-07-18 06:40:12
 ---
 ## Home
  This is the main page of our Angular e-commerce store. Here we get
 
   - List of all products
-  - Filter Products: based on `Price (Price Slider), BrFeatures (Color, Type, Fit, Fabric, Neck)`
+  - Filter Products: based on `Price (Price Slider), Brand, Features (Color, Type, Fit, Fabric, Neck)`
   - Sort: Based on Price and Name
 
 Each product contains a add to cart button. Once the product is added into the cart, we get the increase or decrease cart

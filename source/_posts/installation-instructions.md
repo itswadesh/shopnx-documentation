@@ -1,5 +1,6 @@
 ---
 title: Installation Instructions
+date: 2017-07-25 06:40:12
 ---
 ### Softwares
 
@@ -16,8 +17,14 @@ title: Installation Instructions
   This will install the required node dependencies and start the Server at http://localhost:4200
   ``` bash
 npm i
-npm run dev
+npm start
   ```  
-
-Welcome to [Hexo](https://hexo.io/)!
-More info: [Deployment](https://hexo.io/docs/deployment.html)
+### Building files for production server
+This will generate both client and server files inside dist directory which can be directly copied to production server
+  ``` bash
+npm run prod
+  ```  
+  <br/>
+  <br/>
+  <br/>
+  <br/>

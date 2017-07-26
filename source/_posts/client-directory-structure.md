@@ -1,6 +1,9 @@
 ---
 title: Client Directory Structure
+date: 2017-07-20 06:40:12
 ---
+<p></p>
+
 ``` bash
 ├───app
 │   ├───account
