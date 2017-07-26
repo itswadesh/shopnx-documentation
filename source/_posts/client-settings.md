@@ -28,6 +28,9 @@ date: 2017-07-24 06:40:12
         exchange_rate: '0.015' // Paypal currency code(USD) / Shop currency (INR) ***  exchange_rate should not be 0 else it will generate divided by 0 error
     };
   ```  
+  <br/>
+  <br/>
+  <br/>
 ### Menu for Dashboad and Header
 ``` bash
   static menu: any[] = [
@@ -51,3 +54,11 @@ date: 2017-07-24 06:40:12
         { name: 'Logout', url: '/account/logout', authenticate: 'user', icon: 'vpn_key' },
     ];
   ```  
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>

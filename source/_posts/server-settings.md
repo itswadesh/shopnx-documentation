@@ -23,6 +23,12 @@ reviewSettings = {
 ``` bash
   userRoles = ['user', 'manager', 'admin']; // This should be in ascending order of authority. e.g. In this case guest will not have access to any other role, where as admin will have the role of guest+user+vendor+manager+admin
   ``` 
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
 ### Forgot Password Email Settings
 ``` bash
 forgotPasswordEmail = (body) => { // Expects email id and password reset token
@@ -49,6 +55,13 @@ resetPasswordEmail = (body) => { // Expects email id and name
   };
 }
   ``` 
+   <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
 ### Order Placed Email Settings
 ``` bash
 orderPlacedEmail = (body) => { // Expects email id, orderNo, ...

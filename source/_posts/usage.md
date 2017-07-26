@@ -24,6 +24,7 @@ quantity option By clicking each product we arrive at the product detail page
   - Size
   - Features
 
+<br/>
 ## Search
  The top navigation bar of the website has a search box which autocompletes with product info while user
 starts typing. By clicking a suggested item in the search bar, the page navigates to the product details page of the selected
@@ -55,7 +56,7 @@ login and signup page has the option for connect using facebook, twitter, google
   - This page automatically choose the best available ShipOptions based on the total order weight and the shipper availability.
   - While checkout the user can choose from any saddress.
 
-
+<br/>
 ## Address Management
  The address management is integrated into the checkout page to make the checkout experience single view
 and easy. Here the user can store and manage different addresses.
@@ -89,7 +90,7 @@ a single Brand, Category A product can have
   - The right sidebar has option to change product ndetails, brand, category
   - This sidebar also contains a module to manage proimages
 
-
+<br/>
 ## Manage Brands
 
 Administrators can add, edit, delete, filter brands of their store from this view
