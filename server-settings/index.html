@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Server Settings | ShopNx</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Path: server/config.ts Website SettingssmsEnabled = true; emailEnabled = true;  Review SettingsreviewSettings = {   enabled: true, // Enables review for products   moderate: false // If enabled, the r">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Server Settings">
+<meta property="og:url" content="http://codenx.com/server-settings/index.html">
+<meta property="og:site_name" content="ShopNx">
+<meta property="og:description" content="Path: server/config.ts Website SettingssmsEnabled = true; emailEnabled = true;  Review SettingsreviewSettings = {   enabled: true, // Enables review for products   moderate: false // If enabled, the r">
+<meta property="og:updated_time" content="2017-07-26T02:46:06.921Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Server Settings">
+<meta name="twitter:description" content="Path: server/config.ts Website SettingssmsEnabled = true; emailEnabled = true;  Review SettingsreviewSettings = {   enabled: true, // Enables review for products   moderate: false // If enabled, the r">
+  
+    <link rel="alternate" href="/atom.xml" title="ShopNx" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+
+  <body>
+    <div id="container">
+      <div id="wrap">
+        <!-- <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">ShopNx</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://codenx.com"></form>
+      </div>
+    </div>
+  </div>
+</header> -->
+        <div class="outer">
+          <section id="main">
+            <article id="post-server-settings" class="article article-type-post" itemscope itemprop="blogPost">
+  <!-- <div class="article-meta">
+    <a href="/server-settings/" class="article-date">
+  <time datetime="2017-07-26T01:56:30.276Z" itemprop="datePublished">2017-07-26</time>
+</a>
+    
+  </div> -->
+  <div class="article-inner">
+    
+      
+        <header class="article-header">
+          
+  
+    <h1 class="article-title" itemprop="name">
+      Server Settings
+    </h1>
+  
+
+        </header>
+        
+          <div class="article-entry" itemprop="articleBody">
+            
+                      <p></p><p>Path: <em>server/config.ts</em></p><p></p>
+<h3 id="Website-Settings"><a href="#Website-Settings" class="headerlink" title="Website Settings"></a>Website Settings</h3><pre><code class="bash">smsEnabled = <span class="literal">true</span>;
+emailEnabled = <span class="literal">true</span>;
+</code></pre>
+<h3 id="Review-Settings"><a href="#Review-Settings" class="headerlink" title="Review Settings"></a>Review Settings</h3><pre><code class="bash">reviewSettings = {
+  enabled: <span class="literal">true</span>, // Enables review <span class="keyword">for</span> products
+  moderate: <span class="literal">false</span> // If enabled, the review will be visible to public after admin approval
+};
+</code></pre>
+<h3 id="Product-Settings"><a href="#Product-Settings" class="headerlink" title="Product Settings"></a>Product Settings</h3><pre><code class="bash">product = { moderate: <span class="literal">false</span> };
+</code></pre>
+<h3 id="User-Roles"><a href="#User-Roles" class="headerlink" title="User Roles"></a>User Roles</h3><pre><code class="bash">userRoles = [<span class="string">'user'</span>, <span class="string">'manager'</span>, <span class="string">'admin'</span>]; // This should be <span class="keyword">in</span> ascending order of authority. e.g. In this <span class="keyword">case</span> guest will not have access to any other role, <span class="built_in">where</span> as admin will have the role of guest+user+vendor+manager+admin
+</code></pre>
+<h3 id="Forgot-Password-Email-Settings"><a href="#Forgot-Password-Email-Settings" class="headerlink" title="Forgot Password Email Settings"></a>Forgot Password Email Settings</h3><pre><code class="bash">forgotPasswordEmail = (body) =&gt; { // Expects email id and password reset token
+  <span class="built_in">return</span> {
+    from: <span class="string">'passwordreset@codenx.com'</span>,
+    to: body.email,
+    subject: <span class="string">'ShopNx Password Reset Request'</span>,
+    text: <span class="string">'You are receiving this because you (or someone else) have requested the reset of the password for your account.\n\n'</span> +
+    <span class="string">'Please click on the following link, or paste this into your browser to complete the process:\n\n'</span> +
+    process.env.DOMAIN + <span class="string">'/account/reset-password/'</span> + body.token + <span class="string">'\n\n'</span> +
+    <span class="string">'If you did not request this, please ignore this email and your password will remain unchanged.\n'</span>
+  }
+}
+</code></pre>
+<h3 id="Reset-Password-Email-Settings"><a href="#Reset-Password-Email-Settings" class="headerlink" title="Reset Password Email Settings"></a>Reset Password Email Settings</h3><pre><code class="bash">resetPasswordEmail = (body) =&gt; { // Expects email id and name
+  <span class="built_in">return</span> {
+    from: <span class="string">'passwordreset@codenx.com'</span>,
+    to: body.email,
+    subject: <span class="string">'ShopNx Password Changed'</span>,
+    text: <span class="string">'Hello,\n\n'</span> +
+    <span class="string">'This is a confirmation that the password for your account '</span> + body.to + <span class="string">' has just been changed.\n'</span>
+  };
+}
+</code></pre>
+<h3 id="Order-Placed-Email-Settings"><a href="#Order-Placed-Email-Settings" class="headerlink" title="Order Placed Email Settings"></a>Order Placed Email Settings</h3><pre><code class="bash">orderPlacedEmail = (body) =&gt; { // Expects email id, orderNo, ...
+  <span class="built_in">return</span> {
+    from: <span class="string">'CodeNx &lt;admin@codenx.com&gt;'</span>,
+    to: body.to,
+    subject: <span class="string">'Order Placed Successfully'</span>,
+    text: <span class="string">'Order No: '</span> + body.orderNo
+    + <span class="string">'\n Status: '</span> + body.status
+    + <span class="string">'\n\n Payment Method: '</span> + body.payment_method
+    + <span class="string">'\n\n Payment ID: '</span> + body.id
+    + <span class="string">'\n Amount: '</span> + body.amount.currency + <span class="string">' '</span> + Math.round(body.amount.total * 100 / body.amount.exchange_rate) / 100
+    + <span class="string">'\n\n Name: '</span> + body.address.recipient_name
+    + <span class="string">'\n Address: '</span> + body.address.line1
+    + <span class="string">'\n City: '</span> + body.address.city
+    + <span class="string">'\n Zip: '</span> + body.address.postal_code
+  };
+}
+</code></pre>
+<h3 id="Order-Updated-Email-Settings"><a href="#Order-Updated-Email-Settings" class="headerlink" title="Order Updated Email Settings"></a>Order Updated Email Settings</h3><pre><code class="bash">orderUpdatedEmail = (body) =&gt; {
+  <span class="built_in">return</span> {
+    from: <span class="string">'CodeNx &lt;admin@codenx.com&gt;'</span>,
+    to: body.to,
+    subject: <span class="string">'Your Order Status Updated'</span>,
+    text: <span class="string">'Order No: '</span> + body.orderNo
+    + <span class="string">'\n Status: '</span> + body.status
+    + <span class="string">'\n\n Payment Method: '</span> + body.payment_method
+    + <span class="string">'\n\n Payment ID: '</span> + body.id
+    + <span class="string">'\n Amount: '</span> + body.amount.currency + <span class="string">' '</span> + Math.round(body.amount.total * 100 / body.amount.exchange_rate) / 100
+    + <span class="string">'\n\n \n Name: '</span> + body.address.recipient_name
+    + <span class="string">'\n Address: '</span> + body.address.line1
+    + <span class="string">'\n City: '</span> + body.address.city
+    + <span class="string">'\n State: '</span> + body.address.state
+    + <span class="string">'\n Zip: '</span> + body.address.postal_code
+  };
+}
+</code></pre>
+
+                        
+          </div>
+          <footer class="article-footer">
+            <a data-url="http://codenx.com/server-settings/" data-id="cj5keww2x0005zwj69jo9zxci" class="article-share-link">
+              Partager
+            </a>
+            
+                
+          </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/usage/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Récent</strong>
+      <div class="article-nav-title">
+        
+          Usage Instructions
+        
+      </div>
+    </a>
+  
+  
+    <a href="/server-directory-structure/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Ancien</strong>
+      <div class="article-nav-title">Server Directory Structure</div>
+    </a>
+  
+</nav>
+
+      
+</article>
+
+
+          </section>
+          <!-- 
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">July 2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Articles récents</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/usage/">Usage Instructions</a>
+          </li>
+        
+          <li>
+            <a href="/server-settings/">Server Settings</a>
+          </li>
+        
+          <li>
+            <a href="/server-directory-structure/">Server Directory Structure</a>
+          </li>
+        
+          <li>
+            <a href="/project-root-directory-structure/">Project Root Directory Structure</a>
+          </li>
+        
+          <li>
+            <a href="/environment-settings/">Environment Settings</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+         -->
+        </div>
+        <footer id="footer">
+  <!--  -->
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy;
+      2017
+        Swadesh Behera<br>
+          Propulsé by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+      </div>
+      <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+        
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+    </div>
+  </body>
+
+  </html>

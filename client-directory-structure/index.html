@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Client Directory Structure | ShopNx</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677├───app│   ├───account│   │   ├───cp│   │   ├───login│">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Client Directory Structure">
+<meta property="og:url" content="http://codenx.com/client-directory-structure/index.html">
+<meta property="og:site_name" content="ShopNx">
+<meta property="og:description" content="1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677├───app│   ├───account│   │   ├───cp│   │   ├───login│">
+<meta property="og:updated_time" content="2017-07-26T01:56:30.230Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Client Directory Structure">
+<meta name="twitter:description" content="1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677├───app│   ├───account│   │   ├───cp│   │   ├───login│">
+  
+    <link rel="alternate" href="/atom.xml" title="ShopNx" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+
+  <body>
+    <div id="container">
+      <div id="wrap">
+        <!-- <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">ShopNx</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://codenx.com"></form>
+      </div>
+    </div>
+  </div>
+</header> -->
+        <div class="outer">
+          <section id="main">
+            <article id="post-client-directory-structure" class="article article-type-post" itemscope itemprop="blogPost">
+  <!-- <div class="article-meta">
+    <a href="/client-directory-structure/" class="article-date">
+  <time datetime="2017-07-26T01:56:30.229Z" itemprop="datePublished">2017-07-26</time>
+</a>
+    
+  </div> -->
+  <div class="article-inner">
+    
+      
+        <header class="article-header">
+          
+  
+    <h1 class="article-title" itemprop="name">
+      Client Directory Structure
+    </h1>
+  
+
+        </header>
+        
+          <div class="article-entry" itemprop="articleBody">
+            
+                      <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div></pre></td><td class="code"><pre><div class="line">├───app</div><div class="line">│   ├───account</div><div class="line">│   │   ├───cp</div><div class="line">│   │   ├───login</div><div class="line">│   │   ├───password</div><div class="line">│   │   └───profile</div><div class="line">│   ├───admin</div><div class="line">│   │   ├───address</div><div class="line">│   │   ├───brands</div><div class="line">│   │   │   └───brand-detail</div><div class="line">│   │   ├───categories</div><div class="line">│   │   ├───coupons</div><div class="line">│   │   │   └───coupon-detail</div><div class="line">│   │   ├───dashboard</div><div class="line">│   │   ├───features</div><div class="line">│   │   │   └───feature-detail</div><div class="line">│   │   ├───media</div><div class="line">│   │   ├───my-orders</div><div class="line">│   │   ├───my-reviews</div><div class="line">│   │   ├───order</div><div class="line">│   │   │   └───order-content</div><div class="line">│   │   ├───product</div><div class="line">│   │   │   ├───features</div><div class="line">│   │   │   ├───product-detail</div><div class="line">│   │   │   └───variants</div><div class="line">│   │   ├───reviews</div><div class="line">│   │   │   └───review-detail</div><div class="line">│   │   ├───shipping</div><div class="line">│   │   │   └───shipping-detail</div><div class="line">│   │   ├───user</div><div class="line">│   │   │   └───user-detail</div><div class="line">│   │   └───wishlist</div><div class="line">│   ├───home</div><div class="line">│   │   ├───banner</div><div class="line">│   │   ├───checkout</div><div class="line">│   │   ├───featured-products</div><div class="line">│   │   ├───home</div><div class="line">│   │   ├───megamenu</div><div class="line">│   │   ├───news-banner</div><div class="line">│   │   ├───owl-carousel</div><div class="line">│   │   ├───product</div><div class="line">│   │   ├───product-card</div><div class="line">│   │   ├───shop</div><div class="line">│   │   ├───success</div><div class="line">│   │   └───wish-button</div><div class="line">│   ├───modal</div><div class="line">│   └───shared</div><div class="line">│       ├───404</div><div class="line">│       ├───address</div><div class="line">│       ├───cart-buttons</div><div class="line">│       ├───dialogs</div><div class="line">│       ├───edit</div><div class="line">│       ├───<span class="built_in">export</span></div><div class="line">│       ├───footer</div><div class="line">│       ├───guards</div><div class="line">│       ├───header</div><div class="line">│       ├───list</div><div class="line">│       ├───list-image</div><div class="line">│       ├───media</div><div class="line">│       ├───oauth-buttons</div><div class="line">│       ├───pipes</div><div class="line">│       ├───search</div><div class="line">│       ├───services</div><div class="line">│       └───submit-button</div><div class="line">├───assets</div><div class="line">│   ├───fashion</div><div class="line">│   └───img</div><div class="line">└───environments</div><div class="line">|   hmr.ts</div><div class="line">|   index.html</div><div class="line">|   main.ts</div><div class="line">|   output.txt</div><div class="line">|   polyfills.ts</div><div class="line">|   test.ts</div><div class="line">|   tsconfig.app.json</div><div class="line">|   tsconfig.spec.json</div><div class="line">|   typings.d.ts</div></pre></td></tr></table></figure>
+                        
+          </div>
+          <footer class="article-footer">
+            <a data-url="http://codenx.com/client-directory-structure/" data-id="cj5keww2v0002zwj66j6s73wp" class="article-share-link">
+              Partager
+            </a>
+            
+                
+          </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/environment-settings/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Récent</strong>
+      <div class="article-nav-title">
+        
+          Environment Settings
+        
+      </div>
+    </a>
+  
+  
+    <a href="/client-settings/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Ancien</strong>
+      <div class="article-nav-title">Client Settings</div>
+    </a>
+  
+</nav>
+
+      
+</article>
+
+
+          </section>
+          <!-- 
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">July 2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Articles récents</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/usage/">Usage Instructions</a>
+          </li>
+        
+          <li>
+            <a href="/server-settings/">Server Settings</a>
+          </li>
+        
+          <li>
+            <a href="/server-directory-structure/">Server Directory Structure</a>
+          </li>
+        
+          <li>
+            <a href="/project-root-directory-structure/">Project Root Directory Structure</a>
+          </li>
+        
+          <li>
+            <a href="/environment-settings/">Environment Settings</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+         -->
+        </div>
+        <footer id="footer">
+  <!--  -->
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy;
+      2017
+        Swadesh Behera<br>
+          Propulsé by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+      </div>
+      <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+        
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+    </div>
+  </body>
+
+  </html>
