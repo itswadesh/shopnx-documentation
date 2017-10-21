@@ -17,12 +17,16 @@ date: 2017-07-25 06:40:12
   This will install the required node dependencies and start the Server at http://localhost:4200
   ``` bash
 npm i
-npm start
+npm run dev
   ```  
 ### Building files for production server
 This will generate both client and server files inside dist directory which can be directly copied to production server
   ``` bash
 npm run prod
+  ```  
+### Run at server
+  ``` bash
+npm start
   ```  
   <br/>
   <br/>
